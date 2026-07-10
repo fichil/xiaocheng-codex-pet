@@ -1,0 +1,9 @@
+{
+  "visual_qa": "pass",
+  "qa_note": "九个状态保持小澄身份与左耳耳麦一致，边缘无品红残留，尺寸稳定且未裁切，方向步态、循环与状态语义均正确。",
+  "repair_rows": [],
+  "postprocessing": {
+    "chroma_cleanup": "soft matte + despill + 1px edge contraction",
+    "extraction_method": "stable-slots"
+  }
+}

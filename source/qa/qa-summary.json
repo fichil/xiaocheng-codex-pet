@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "atlas": {
+    "format": "WEBP",
+    "mode": "RGBA",
+    "width": 1536,
+    "height": 1872,
+    "transparent_rgb_residue_pixels": 0
+  },
+  "frame_inspection": {
+    "errors": 0,
+    "extraction_method": "stable-slots",
+    "stable_slots_visually_confirmed": true
+  },
+  "visual_qa": "pass",
+  "repairs": [
+    "修复 running-left 的左耳耳麦侧别",
+    "使用软遮罩、去色溢和 1 像素边缘收缩清除品红残边",
+    "使用 stable-slots 消除 jumping 尺寸跳变"
+  ]
+}
