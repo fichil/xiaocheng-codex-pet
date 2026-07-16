@@ -29,6 +29,12 @@ $sourceManifest = Get-Content -Raw -Encoding utf8 -LiteralPath $sourceManifestPa
 if ($sourceManifest.id -ne 'xiaocheng' -or $sourceManifest.spritesheetPath -ne 'spritesheet.webp') {
     throw 'pet.json 不是预期的小澄清单。'
 }
+if (
+    -not ($sourceManifest.PSObject.Properties.Name -contains 'spriteVersionNumber') -or
+    [int]$sourceManifest.spriteVersionNumber -ne 2
+) {
+    throw 'pet.json 不是小澄 V2 清单，要求 spriteVersionNumber=2。'
+}
 
 $petsDir = Join-Path $CodexHome 'pets'
 $targetDir = Join-Path $petsDir 'xiaocheng'

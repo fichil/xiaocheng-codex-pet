@@ -1,17 +1,18 @@
 {
   "pet_id": "xiaocheng",
   "display_name": "小澄·薄荷助手",
+  "sprite_version_number": 2,
   "style_preset": "sticker",
   "chroma_key": "#FF00FF",
   "atlas": {
     "columns": 8,
-    "rows": 9,
+    "rows": 11,
     "cell_width": 192,
     "cell_height": 208,
     "width": 1536,
-    "height": 1872
+    "height": 2288
   },
-  "frames": {
+  "standard_frames": {
     "idle": 6,
     "running-right": 8,
     "running-left": 8,
@@ -22,11 +23,38 @@
     "running": 6,
     "review": 6
   },
+  "look_directions": [
+    "000",
+    "022.5",
+    "045",
+    "067.5",
+    "090",
+    "112.5",
+    "135",
+    "157.5",
+    "180",
+    "202.5",
+    "225",
+    "247.5",
+    "270",
+    "292.5",
+    "315",
+    "337.5"
+  ],
   "postprocessing": {
-    "soft_matte": true,
-    "despill": true,
-    "edge_contract_pixels": 1,
-    "extraction_method": "stable-slots"
+    "standard_extraction_method": "stable-slots",
+    "look_registration": "shared-scale-and-baseline-per-coherent-row",
+    "despill": "single deterministic pass",
+    "clear_transparent_rgb": true
   },
-  "identity_note": "单侧耳麦固定在小澄的解剖学左耳；running-left 必须单独生成，不得镜像。"
+  "qa": {
+    "atlas_validation": "require-v2",
+    "direction_semantics": "all 16 labeled directions",
+    "direction_blind_reviewers": 3,
+    "direction_blind_consensus": "strict per-cell majority",
+    "cardinal_directions": "hard gates",
+    "continuity": "adjacent 16-pose loop review",
+    "final_visual_qa": "independent worker"
+  },
+  "identity_note": "单侧耳麦固定在小澄的解剖学左耳；标准九行动画保持 V1 身份与语义；观察动作通过眼睛、眼睑、眉毛、头颈和克制的上半身跟随表达，禁止旋转整个角色。"
 }

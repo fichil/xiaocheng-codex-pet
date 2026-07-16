@@ -1,21 +1,39 @@
 {
   "ok": true,
+  "spriteVersionNumber": 2,
   "atlas": {
     "format": "WEBP",
     "mode": "RGBA",
+    "columns": 8,
+    "rows": 11,
     "width": 1536,
-    "height": 1872,
-    "transparent_rgb_residue_pixels": 0
-  },
-  "frame_inspection": {
+    "height": 2288,
+    "cellWidth": 192,
+    "cellHeight": 208,
+    "transparentRgbResiduePixels": 0,
     "errors": 0,
-    "extraction_method": "stable-slots",
-    "stable_slots_visually_confirmed": true
+    "warnings": 0
   },
-  "visual_qa": "pass",
-  "repairs": [
-    "修复 running-left 的左耳耳麦侧别",
-    "使用软遮罩、去色溢和 1 像素边缘收缩清除品红残边",
-    "使用 stable-slots 消除 jumping 尺寸跳变"
-  ]
+  "standardRows": {
+    "frameCounts": [6, 8, 8, 4, 5, 8, 6, 6, 6],
+    "extractionMethod": "stable-slots",
+    "visualQa": "pass"
+  },
+  "lookDirections": {
+    "count": 16,
+    "order": "clockwise in 22.5 degree steps",
+    "labeledSemantics": { "pass": 11, "warning": 5, "fail": 0 },
+    "blindReviewers": 3,
+    "blindConsensus": "strict per-cell majority",
+    "blindValidation": "pass",
+    "cardinalHardGates": "all pass",
+    "continuity": "pass with reviewed metric warnings"
+  },
+  "postprocessing": {
+    "despill": "one deterministic pass",
+    "spillTolerance": 0.3,
+    "minimumSaturation": 0.05,
+    "transparentRgbCleared": true
+  },
+  "spritesheetSha256": "ADAA5F7CC323049258966614B4193E9BFF6C35A8329E413787DDD369C02F7953"
 }

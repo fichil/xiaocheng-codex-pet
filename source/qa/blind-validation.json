@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "reviewers": 3,
+  "consensus": "strict per-cell majority",
+  "cardinalHardGates": {
+    "000": "pass",
+    "090": "pass",
+    "180": "pass",
+    "270": "pass"
+  },
+  "reviewWarnings": [
+    "022.5 与 337.5 的水平轴在无标签尺寸下多数判为 ambiguous。",
+    "067.5 与 112.5 的垂直轴在无标签尺寸下多数判为 ambiguous。"
+  ],
+  "unconfirmedCardinals": []
+}

@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "alphaHoles": 0,
+  "medianDiffPixels": 1447.5,
+  "reviewedWarnings": [
+    "045 -> 067.5 是局部像素差离群值，正常尺寸循环中无可见跳变。",
+    "157.5 -> 180 是局部像素差离群值，正常尺寸循环中无可见跳变。"
+  ],
+  "decision": "accept"
+}

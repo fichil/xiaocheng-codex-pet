@@ -1,0 +1,23 @@
+{
+  "reviewer": "independent final visual QA",
+  "coordinateSystem": "screen coordinates",
+  "directions": [
+    { "direction": "000", "expected": "up", "verdict": "pass", "reason": "眼睛上移且抬颏，水平居中。" },
+    { "direction": "022.5", "expected": "up-right", "verdict": "warning", "reason": "上移明确但向右位移较轻微。" },
+    { "direction": "045", "expected": "up-right", "verdict": "pass", "reason": "瞳孔鼻尖向右且抬颏。" },
+    { "direction": "067.5", "expected": "up-right", "verdict": "warning", "reason": "向右明确但向上分量接近水平。" },
+    { "direction": "090", "expected": "right", "verdict": "pass", "reason": "鼻尖瞳孔朝右且视线水平。" },
+    { "direction": "112.5", "expected": "down-right", "verdict": "warning", "reason": "向右明确但向下分量较轻微。" },
+    { "direction": "135", "expected": "down-right", "verdict": "pass", "reason": "面部向右且眼睑下压。" },
+    { "direction": "157.5", "expected": "down-right", "verdict": "warning", "reason": "向下明确并保留轻微向右分量。" },
+    { "direction": "180", "expected": "down", "verdict": "pass", "reason": "低头垂眼且水平居中。" },
+    { "direction": "202.5", "expected": "down-left", "verdict": "pass", "reason": "低头同时鼻尖瞳孔轻微向左。" },
+    { "direction": "225", "expected": "down-left", "verdict": "pass", "reason": "左移和下视两轴均清晰。" },
+    { "direction": "247.5", "expected": "down-left", "verdict": "pass", "reason": "向左明确并保留向下分量。" },
+    { "direction": "270", "expected": "left", "verdict": "pass", "reason": "鼻尖瞳孔朝左且视线水平。" },
+    { "direction": "292.5", "expected": "up-left", "verdict": "pass", "reason": "向左同时抬颏上视。" },
+    { "direction": "315", "expected": "up-left", "verdict": "pass", "reason": "左移和上视两轴均清晰。" },
+    { "direction": "337.5", "expected": "up-left", "verdict": "warning", "reason": "向上明确但向左分量较轻微。" }
+  ],
+  "summary": { "pass": 11, "warning": 5, "fail": 0 }
+}

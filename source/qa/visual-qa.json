@@ -1,9 +1,10 @@
 {
   "visual_qa": "pass",
-  "qa_note": "九个状态保持小澄身份与左耳耳麦一致，边缘无品红残留，尺寸稳定且未裁切，方向步态、循环与状态语义均正确。",
-  "repair_rows": [],
-  "postprocessing": {
-    "chroma_cleanup": "soft matte + despill + 1px edge contraction",
-    "extraction_method": "stable-slots"
-  }
+  "qa_note": "九个标准动画行与十六方向观察循环在角色身份、画风、配色、轮廓、脸型、比例和耳麦位置上保持一致，动作清晰完整且无阻断性问题。",
+  "accepted_warnings": [
+    "022.5 与 337.5 的水平分量在盲测中较弱，但标注循环确认象限正确。",
+    "067.5 与 112.5 的垂直分量在盲测中较弱，但标注循环确认过渡方向正确。",
+    "045 到 067.5、157.5 到 180 的像素差为局部离群值，但联系表和循环预览未见错象限、反转、缩放跳变或注册跳动。"
+  ],
+  "repair_rows": []
 }
