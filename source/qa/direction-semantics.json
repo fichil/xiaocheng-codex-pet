@@ -1,23 +1,236 @@
 {
-  "reviewer": "independent final visual QA",
-  "coordinateSystem": "screen coordinates",
+  "ok": true,
+  "reviewer": "independent final_visual_qa",
+  "reviewed_spritesheet_sha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797",
   "directions": [
-    { "direction": "000", "expected": "up", "verdict": "pass", "reason": "眼睛上移且抬颏，水平居中。" },
-    { "direction": "022.5", "expected": "up-right", "verdict": "warning", "reason": "上移明确但向右位移较轻微。" },
-    { "direction": "045", "expected": "up-right", "verdict": "pass", "reason": "瞳孔鼻尖向右且抬颏。" },
-    { "direction": "067.5", "expected": "up-right", "verdict": "warning", "reason": "向右明确但向上分量接近水平。" },
-    { "direction": "090", "expected": "right", "verdict": "pass", "reason": "鼻尖瞳孔朝右且视线水平。" },
-    { "direction": "112.5", "expected": "down-right", "verdict": "warning", "reason": "向右明确但向下分量较轻微。" },
-    { "direction": "135", "expected": "down-right", "verdict": "pass", "reason": "面部向右且眼睑下压。" },
-    { "direction": "157.5", "expected": "down-right", "verdict": "warning", "reason": "向下明确并保留轻微向右分量。" },
-    { "direction": "180", "expected": "down", "verdict": "pass", "reason": "低头垂眼且水平居中。" },
-    { "direction": "202.5", "expected": "down-left", "verdict": "pass", "reason": "低头同时鼻尖瞳孔轻微向左。" },
-    { "direction": "225", "expected": "down-left", "verdict": "pass", "reason": "左移和下视两轴均清晰。" },
-    { "direction": "247.5", "expected": "down-left", "verdict": "pass", "reason": "向左明确并保留向下分量。" },
-    { "direction": "270", "expected": "left", "verdict": "pass", "reason": "鼻尖瞳孔朝左且视线水平。" },
-    { "direction": "292.5", "expected": "up-left", "verdict": "pass", "reason": "向左同时抬颏上视。" },
-    { "direction": "315", "expected": "up-left", "verdict": "pass", "reason": "左移和上视两轴均清晰。" },
-    { "direction": "337.5", "expected": "up-left", "verdict": "warning", "reason": "向上明确但向左分量较轻微。" }
+    {
+      "direction": "000",
+      "expected": "up",
+      "observed": "Head is centered and tipped back; chin and neck are exposed and both teal pupils sit high.",
+      "horizontal": "center",
+      "vertical": "up",
+      "verdict": "pass",
+      "reason": "Clear upward cardinal without lateral yaw."
+    },
+    {
+      "direction": "022.5",
+      "expected": "up-right",
+      "observed": "Chin remains raised while nose, face and pupils shift toward screen-right; the far headset recedes behind the right hair edge.",
+      "horizontal": "screen-right",
+      "vertical": "up",
+      "verdict": "pass",
+      "reason": "Both upward pitch and a small rightward turn are visible."
+    },
+    {
+      "direction": "045",
+      "expected": "up-right",
+      "observed": "Face turns further screen-right, visible cheek becomes asymmetric, and pupils and lifted chin point above the right side.",
+      "horizontal": "screen-right",
+      "vertical": "up",
+      "verdict": "pass",
+      "reason": "Clear upper-right quadrant; smoothly follows022.5."
+    },
+    {
+      "direction": "067.5",
+      "expected": "up-right",
+      "observed": "Rightward nose and eye aim persist with an elevated chin and upward pupil placement; far headset stays largely occluded.",
+      "horizontal": "screen-right",
+      "vertical": "up",
+      "verdict": "warning",
+      "reason": "Correct quadrant, but pose is close to045 and the pitch change into090 is larger than the preceding change."
+    },
+    {
+      "direction": "090",
+      "expected": "right",
+      "observed": "Near-profile nose and face point screen-right at near-level pitch; anatomical-left earpiece is hidden on the far side.",
+      "horizontal": "screen-right",
+      "vertical": "level",
+      "verdict": "pass",
+      "reason": "Unambiguous right cardinal."
+    },
+    {
+      "direction": "112.5",
+      "expected": "down-right",
+      "observed": "Rightward face and nose remain, while chin and visible eye line lower relative to090.",
+      "horizontal": "screen-right",
+      "vertical": "down",
+      "verdict": "pass",
+      "reason": "Shallow downward-right aim is visible in the ordered sequence."
+    },
+    {
+      "direction": "135",
+      "expected": "down-right",
+      "observed": "Head turns partly back toward front while chin tucks and pupils aim lower toward screen-right.",
+      "horizontal": "screen-right",
+      "vertical": "down",
+      "verdict": "pass",
+      "reason": "Both components of the lower-right quadrant remain readable."
+    },
+    {
+      "direction": "157.5",
+      "expected": "down-right",
+      "observed": "Head is mostly frontal and tipped down; nose/eye asymmetry retains a slight rightward bias, with pupils low beneath the fringe.",
+      "horizontal": "weak screen-right; near-center in isolation",
+      "vertical": "down",
+      "verdict": "warning",
+      "reason": "Downward pitch is clear; lateral bias is subtle at192x208. Ordered135->157.5->180 progression remains coherent and has no contrary leftward turn."
+    },
+    {
+      "direction": "180",
+      "expected": "down",
+      "observed": "Frontal head is bowed, crown/fringe become more visible, chin tucks, and both eyes look downward.",
+      "horizontal": "center",
+      "vertical": "down",
+      "verdict": "pass",
+      "reason": "Clear downward cardinal."
+    },
+    {
+      "direction": "202.5",
+      "expected": "down-left",
+      "observed": "Bowed face and pupils angle toward screen-left; the anatomical-left headset starts becoming more exposed on screen-right.",
+      "horizontal": "screen-left",
+      "vertical": "down",
+      "verdict": "pass",
+      "reason": "Small leftward yaw plus clear downward pitch follows180."
+    },
+    {
+      "direction": "225",
+      "expected": "down-left",
+      "observed": "Nose and eye aim point further screen-left under the lowered brow; headset is clearly visible on the near ear.",
+      "horizontal": "screen-left",
+      "vertical": "down",
+      "verdict": "pass",
+      "reason": "Clear lower-left quadrant."
+    },
+    {
+      "direction": "247.5",
+      "expected": "down-left",
+      "observed": "Face is more side-on toward screen-left, chin remains lowered, and near-ear headset stays visible.",
+      "horizontal": "screen-left",
+      "vertical": "down",
+      "verdict": "pass",
+      "reason": "Leftward dominance with a shallow downward component leads coherently into270."
+    },
+    {
+      "direction": "270",
+      "expected": "left",
+      "observed": "Near-profile face and nose point screen-left at approximately level pitch, with the single near-ear headset fully visible.",
+      "horizontal": "screen-left",
+      "vertical": "level",
+      "verdict": "pass",
+      "reason": "Unambiguous left cardinal."
+    },
+    {
+      "direction": "292.5",
+      "expected": "up-left",
+      "observed": "Leftward face rises with an exposed chin/neck and high pupil aim; the headset remains on the visible anatomical-left ear.",
+      "horizontal": "screen-left",
+      "vertical": "up",
+      "verdict": "warning",
+      "reason": "Correct upper-left quadrant, but the upward pitch arrives relatively strongly and this frame is very similar to315."
+    },
+    {
+      "direction": "315",
+      "expected": "up-left",
+      "observed": "Face and pupils remain aimed above screen-left with raised chin and consistent near-ear headset; head contour is close to292.5.",
+      "horizontal": "screen-left",
+      "vertical": "up",
+      "verdict": "warning",
+      "reason": "Correct quadrant and no reversal; limited visual separation from292.5 reduces angular granularity."
+    },
+    {
+      "direction": "337.5",
+      "expected": "up-left",
+      "observed": "Head returns almost to front while chin and pupils remain raised; slight leftward facial/eye asymmetry persists.",
+      "horizontal": "weak screen-left; near-center in isolation",
+      "vertical": "up",
+      "verdict": "warning",
+      "reason": "Upward pitch is clear but horizontal bias is weak at192x208.315->337.5->000 converges coherently on up without a contrary rightward turn."
+    }
   ],
-  "summary": { "pass": 11, "warning": 5, "fail": 0 }
+  "continuity": {
+    "verdict": "pass_with_warnings",
+    "order": "clockwise from up:000,022.5,045,067.5,090,112.5,135,157.5,180,202.5,225,247.5,270,292.5,315,337.5",
+    "boundaries": [
+      {
+        "from": "045",
+        "to": "067.5",
+        "verdict": "warning",
+        "finding": "Same upper-right quadrant with subtle further rightward adjustment; head, dress, base and far-ear occlusion remain stable. Similarity is a granularity limitation, not reversal or conspicuous geometry snap.",
+        "diffPixels": 993,
+        "centerDelta": 0.7071067811865476
+      },
+      {
+        "from": "157.5",
+        "to": "180",
+        "verdict": "pass",
+        "finding": "A weak rightward/downward face settles to centered down; head lowers slightly while feet and body scale remain stable.",
+        "diffPixels": 1421,
+        "centerDelta": 1.118033988749895
+      },
+      {
+        "from": "337.5",
+        "to": "000",
+        "verdict": "pass",
+        "finding": "Near-frontal up-left resolves to centered up; head and face remain the same character, with no opposing lateral turn or obvious size jump.",
+        "diffPixels": 1646,
+        "centerDelta": 1
+      },
+      {
+        "from": "067.5",
+        "to": "090",
+        "verdict": "warning",
+        "finding": "Correct progression from up-right to level right, but pitch spacing is less even. The flagged difference is localized to the changing head/hair silhouette rather than a displaced body or scale jump.",
+        "diffPixels": 1469,
+        "centerDelta": 1
+      },
+      {
+        "from": "292.5",
+        "to": "315",
+        "verdict": "warning",
+        "finding": "Both are clearly up-left and preserve the near-ear headset; their head/eye poses are too similar to provide strong separate angular steps, without a reversed cue.",
+        "diffPixels": 1096,
+        "centerDelta": 0
+      }
+    ],
+    "metricReview": {
+      "source": "qa/look-continuity.json",
+      "ok": true,
+      "alphaHoles": [],
+      "medianDiffPixels": 1226,
+      "maxCenterDelta": 1.118033988749895,
+      "maxAreaRatio": 1.044107087906452,
+      "acceptedMetricWarnings": [
+        "067.5->090 diff is a local outlier (1469 pixels vs neighbor average 856)"
+      ]
+    },
+    "hardWrongCardinal": false,
+    "hardWrongQuadrant": false,
+    "reversal": false,
+    "conspicuousGeometryOrScaleSnap": false,
+    "runtimePlaybackObserved": false
+  },
+  "blindReview": {
+    "source": "qa/direction-blind-validation.json",
+    "inspected": true,
+    "ok": true,
+    "errors": [],
+    "unconfirmed": [],
+    "warnings": [
+      "horizontal-1 B horizontal axis is ambiguous (337.5)",
+      "horizontal-7 A horizontal axis is ambiguous (157.5)"
+    ],
+    "disposition": "Accepted as intermediate-direction warnings after independent ordered-pixel review. Both vertical cues are clear; adjacent sequence stays in the expected quadrant and converges on its cardinal. All cardinal checks and remaining pair axes pass the combined report.",
+    "privateAnswerKeyInspected": false
+  },
+  "hard_failures": [],
+  "warnings": [
+    "Intermediate horizontal direction is weak at157.5 and337.5 at192x208; both are near-center in isolation, while their vertical cues and ordered-loop placement are clear.",
+    "292.5 and315 are visually very similar;045 and067.5 also have limited separation. Angular spacing is uneven, without a wrong quadrant or reversal.",
+    "Continuity metric flags067.5->090:1469 changed pixels versus neighbor average856. Frame comparison shows a larger pitch-to-level step, not an identity, geometry or scale discontinuity.",
+    "Runtime Codex/browser playback could not be observed because of the helper sandbox fault. Timing was read from actual GIF files; no real-time UI playback claim is made."
+  ],
+  "runtimeDisplayVerified": false,
+  "method": "ordered actual GIF/atlas frames at192x208 plus timing; runtime playback not observed",
+  "spritesheetSha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797"
 }

@@ -1,0 +1,106 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "visualJobs": [
+    {
+      "id": "base",
+      "kind": "base-pet",
+      "selectedSourceSha256": "51429DFD0721025B65F8764D6E2E88C42208FBEA92E27E4055D9C362598045F6",
+      "qaNote": "Worker visual QA passed: matte 3D style, complete full body, anatomical left-ear headset, pure chroma background, no floor shadow.",
+      "completedAt": "2026-09-14T06:14:28.3006274Z"
+    },
+    {
+      "id": "idle",
+      "kind": "row-strip",
+      "selectedSourceSha256": "6194F0C19A418F59168C5BACBAAFC1110485D45868051BFB4333F32DB0DA661C",
+      "qaNote": "Six complete 3D poses, frame 3 blink, stable feet and left-ear headset; worker visual pass.",
+      "completedAt": "2026-09-14T06:18:17.2854006Z"
+    },
+    {
+      "id": "running-right",
+      "kind": "row-strip",
+      "selectedSourceSha256": "333847B262771BD4CE2F392B456AABCA53150FACF9F4E0387256722C0F5BA59F",
+      "qaNote": "Eight complete right-facing poses, hidden far-side earcup; review alternating legs in playback.",
+      "completedAt": "2026-09-14T06:18:18.8145981Z"
+    },
+    {
+      "id": "running-left",
+      "kind": "row-strip",
+      "selectedSourceSha256": "6663EA75F7810620ABBDD9F7825B69F290B787669BA5C8777EB246B5A86450ED",
+      "qaNote": "Eight complete leftward poses, near-side left headset correct; passing phases 3/7, verify opposite-leg alternation in final review.",
+      "completedAt": "2026-09-14T06:22:24.3084011Z"
+    },
+    {
+      "id": "waving",
+      "kind": "row-strip",
+      "selectedSourceSha256": "7E665B02A7D8A51C7FD19A45C642D8209F133147AB3CA5A0D355740072A6F966",
+      "qaNote": "Worker pass: neutral-raise-wave-return, stable 3D identity and headset, no effects or clipping.",
+      "completedAt": "2026-09-14T06:20:04.0420103Z"
+    },
+    {
+      "id": "jumping",
+      "kind": "row-strip",
+      "selectedSourceSha256": "C2882C05BAEFB8F320089860250FB706A4D07573589244356418D508C2CD996B",
+      "qaNote": "Worker pass: five complete crouch-lift-peak-descent-settle poses, consistent scale and no effects; preserve vertical displacement in extraction.",
+      "completedAt": "2026-09-14T06:23:42.3506524Z"
+    },
+    {
+      "id": "failed",
+      "kind": "row-strip",
+      "selectedSourceSha256": "4D23AA4B8F4239EB190CD1CCFF288225518693D29DF6D00DE90F910333448C37",
+      "qaNote": "Worker pass: eight restrained disappointment-recovery poses, stable identity and left headset; no clipping or effects.",
+      "completedAt": "2026-09-14T06:20:57.2553803Z"
+    },
+    {
+      "id": "waiting",
+      "kind": "row-strip",
+      "selectedSourceSha256": "A2BAFB4328F993D5B8AEA84A6FBBECD2E0DAE1E08B030C81BE9684EB4C22515B",
+      "qaNote": "Six complete 3D asking poses, stable feet and headset; clasped-hands variation at frame 5 requires loop review.",
+      "completedAt": "2026-09-14T06:18:20.3616659Z"
+    },
+    {
+      "id": "running",
+      "kind": "row-strip",
+      "selectedSourceSha256": "547C78A1F24F7AD75E2720E77118DC14220A13FC2A09EC1E131B2A7A31507423",
+      "qaNote": "Worker visual pass: six headset-touch thinking poses with nod/blink and calm return, planted feet and consistent 3D identity.",
+      "completedAt": "2026-09-14T06:22:25.9416468Z"
+    },
+    {
+      "id": "review",
+      "kind": "row-strip",
+      "selectedSourceSha256": "2846CC4E49A9F1B3956F7089CBFF73AEDA6A92178CF918F0D2F424D4EA5F2184",
+      "qaNote": "Worker pass: six hands-behind-back inspection/gaze/nod poses, stable 3D scale and headset; no clipping/effects.",
+      "completedAt": "2026-09-14T06:24:21.283373Z"
+    },
+    {
+      "id": "look-cardinals",
+      "kind": "look-cardinal-strip",
+      "selectedSourceSha256": "AB45DF16ED6AEA902456F20D6D77636CA9A3D39C009BBAF45ED4BE10EB880574",
+      "qaNote": "Four cardinals approved by worker and parent after extraction; no clipping; correct up/right/down/left and anatomical left-ear occlusion.",
+      "completedAt": "2026-09-14T06:40:14.7713127Z"
+    },
+    {
+      "id": "look-row-9",
+      "kind": "look-row-strip",
+      "selectedSourceSha256": "67707F13FC957F22CD755D49EB16598990CDD9D1943DB37E3524BB28B15FFE42",
+      "qaNote": "Eight coherent registered poses, edge check passed, no labeled semantic or continuity hard failures; near-axis intermediate warnings await blind/final QA.",
+      "completedAt": "2026-09-14T06:46:33.524121Z"
+    },
+    {
+      "id": "look-row-10",
+      "kind": "look-row-strip",
+      "selectedSourceSha256": "0B7016EFE96149668D86C9217D42D9A7745852D55570D8854040D682B1A39F95",
+      "qaNote": "Full coherent row candidate 2 accepted by source, independent pet-size and parent normalized review; no hard failures. Similar 292.5/315 and weak 337.5 horizontal component recorded as minor warnings.",
+      "completedAt": "2026-09-14T07:08:42.200740+00:00"
+    }
+  ],
+  "sourceArtGeneration": "All 13 visual jobs generated; left/right locomotion independently generated.",
+  "deterministicCorrection": {
+    "category": "extraction",
+    "evidence": "Auto per-component fit forced all jumping poses to y=5..203, enlarging crouch and removing flight height; other rows similarly lose natural vertical motion.",
+    "repair": "Use existing stable-slots shared viewport for all rows, preserving generated shape size and vertical motion.",
+    "source_art_regenerated": false,
+    "at": "2026-09-14T14:28:03.2634709+08:00",
+    "resolution": "Independent QA confirmed source art intact, head scale stable, jump feet about 25 px above settled baseline; accepted stable-slots for all nine rows."
+  },
+  "spritesheetSha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797"
+}

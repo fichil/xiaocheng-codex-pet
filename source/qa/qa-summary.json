@@ -1,6 +1,7 @@
 {
   "ok": true,
   "spriteVersionNumber": 2,
+  "visualRevision": "soft-3d-2026-09-14",
   "atlas": {
     "format": "WEBP",
     "mode": "RGBA",
@@ -10,30 +11,133 @@
     "height": 2288,
     "cellWidth": 192,
     "cellHeight": 208,
+    "neutralLookFrame": {
+      "row": 0,
+      "column": 6
+    },
     "transparentRgbResiduePixels": 0,
     "errors": 0,
     "warnings": 0
   },
   "standardRows": {
-    "frameCounts": [6, 8, 8, 4, 5, 8, 6, 6, 6],
+    "frameCounts": [
+      6,
+      8,
+      8,
+      4,
+      5,
+      8,
+      6,
+      6,
+      6
+    ],
     "extractionMethod": "stable-slots",
-    "visualQa": "pass"
+    "visualQa": "pass",
+    "previewTimingMs": {
+      "idle": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ],
+      "running-right": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "running-left": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "waving": [
+        140,
+        140,
+        140,
+        280
+      ],
+      "jumping": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ],
+      "failed": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ],
+      "waiting": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ],
+      "running": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "review": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ]
+    }
   },
   "lookDirections": {
     "count": 16,
     "order": "clockwise in 22.5 degree steps",
-    "labeledSemantics": { "pass": 11, "warning": 5, "fail": 0 },
+    "labeledSemantics": {
+      "pass": 11,
+      "warning": 5,
+      "fail": 0
+    },
     "blindReviewers": 3,
     "blindConsensus": "strict per-cell majority",
     "blindValidation": "pass",
     "cardinalHardGates": "all pass",
-    "continuity": "pass with reviewed metric warnings"
+    "continuity": "reviewed and accepted by final independent visual QA"
   },
   "postprocessing": {
-    "despill": "one deterministic pass",
-    "spillTolerance": 0.3,
-    "minimumSaturation": 0.05,
-    "transparentRgbCleared": true
+    "despill": "one deterministic edge-local pass on final assembled atlas",
+    "transparentRgbCleared": true,
+    "previewSource": "crops of this exact final atlas",
+    "previewCompatibility": "all 10 old/new GIF sizes, frame counts and per-frame durations match"
   },
-  "spritesheetSha256": "ADAA5F7CC323049258966614B4193E9BFF6C35A8329E413787DDD369C02F7953"
+  "runtimeDisplayVerified": false,
+  "spritesheetSha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797",
+  "runtimeDisplayConfirmation": {
+    "status": "confirmed",
+    "source": "user",
+    "date": "2026-09-14",
+    "statement": "用户确认已成功切换到新版桌宠。"
+  },
+  "runtimeDisplayVerifiedMeaning": "Direct runtime observation by the agent; user confirmation is recorded separately."
 }
