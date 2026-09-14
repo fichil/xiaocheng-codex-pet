@@ -2,7 +2,7 @@
   "pet_id": "xiaocheng",
   "display_name": "小澄·薄荷助手",
   "sprite_version_number": 2,
-  "style_preset": "sticker",
+  "style_preset": "3d-toy",
   "chroma_key": "#FF00FF",
   "atlas": {
     "columns": 8,
@@ -43,7 +43,7 @@
   ],
   "postprocessing": {
     "standard_extraction_method": "stable-slots",
-    "look_registration": "shared-scale-and-baseline-per-coherent-row",
+    "look_registration": "row 9 persists one shared scale and lower-body anchor; row 10 reuses that exact transform",
     "despill": "single deterministic pass",
     "clear_transparent_rgb": true
   },
@@ -56,5 +56,9 @@
     "continuity": "adjacent 16-pose loop review",
     "final_visual_qa": "independent worker"
   },
-  "identity_note": "单侧耳麦固定在小澄的解剖学左耳；标准九行动画保持 V1 身份与语义；观察动作通过眼睛、眼睑、眉毛、头颈和克制的上半身跟随表达，禁止旋转整个角色。"
+  "identity_note": "柔和哑光 3D 手办风格；约三头身的成年 Q 版助手，银蓝短发、青绿色眼睛和奶油白/薄荷连帽裙。耳麦固定解剖学左耳；右转时远侧遮挡，左转时近侧可见。九种动作全新生成，观察通过眼球、眼睑、头颈和克制上身随动表达。",
+  "neutral_look_frame": {
+    "row": 0,
+    "column": 6
+  }
 }

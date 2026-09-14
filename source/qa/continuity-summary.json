@@ -1,10 +1,10 @@
 {
   "ok": true,
   "alphaHoles": 0,
-  "medianDiffPixels": 1447.5,
+  "medianDiffPixels": 1226.0,
   "reviewedWarnings": [
-    "045 -> 067.5 是局部像素差离群值，正常尺寸循环中无可见跳变。",
-    "157.5 -> 180 是局部像素差离群值，正常尺寸循环中无可见跳变。"
+    "067.5->090 diff is a local outlier (1469 pixels vs neighbor average 856)"
   ],
-  "decision": "accept"
+  "decision": "accept after independent normal-size visual review",
+  "spritesheetSha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797"
 }

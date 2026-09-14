@@ -1,10 +1,243 @@
 {
   "visual_qa": "pass",
-  "qa_note": "九个标准动画行与十六方向观察循环在角色身份、画风、配色、轮廓、脸型、比例和耳麦位置上保持一致，动作清晰完整且无阻断性问题。",
-  "accepted_warnings": [
-    "022.5 与 337.5 的水平分量在盲测中较弱，但标注循环确认象限正确。",
-    "067.5 与 112.5 的垂直分量在盲测中较弱，但标注循环确认过渡方向正确。",
-    "045 到 067.5、157.5 到 180 的像素差为局部离群值，但联系表和循环预览未见错象限、反转、缩放跳变或注册跳动。"
+  "reviewed_spritesheet_sha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797",
+  "reviewer": "independent final_visual_qa",
+  "states": [
+    {
+      "state": "idle",
+      "verdict": "pass",
+      "framesReviewed": 6,
+      "durationsMs": [
+        280,
+        110,
+        110,
+        140,
+        140,
+        320
+      ],
+      "findings": "Quiet breathing/posture changes and one readable closed-eye blink return to open eyes. Silhouette and foot base remain stable; neutral reference was also inspected."
+    },
+    {
+      "state": "running-right",
+      "verdict": "pass",
+      "framesReviewed": 8,
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "findings": "Right-facing gait shows extended and gathered leg phases with countering arms. Anatomical-left headset is far-side/occluded; no mirrored near-ear duplicate is visible. Limbs and boots stay inside the cell."
+    },
+    {
+      "state": "running-left",
+      "verdict": "pass",
+      "framesReviewed": 8,
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "findings": "Distinct left-facing gait shows alternating extension/gather phases. Single anatomical-left headset remains visible on the near ear throughout; character design and body scale match the opposite gait."
+    },
+    {
+      "state": "waving",
+      "verdict": "pass",
+      "framesReviewed": 4,
+      "durationsMs": [
+        140,
+        140,
+        140,
+        280
+      ],
+      "findings": "Neutral hands progress to raised open palm, a changed wave angle and lowered return. Headset remains on the opposite, anatomical-left ear and the head does not drift."
+    },
+    {
+      "state": "jumping",
+      "verdict": "pass",
+      "framesReviewed": 5,
+      "durationsMs": [
+        140,
+        140,
+        140,
+        140,
+        280
+      ],
+      "findings": "Crouch, ascent, joyful arms-up apex, descent and low landing/settle are all visible in order. Height changes come from pose and vertical motion; head identity is stable and neither hands nor boots are clipped. Final settle is a low landing pose."
+    },
+    {
+      "state": "failed",
+      "verdict": "pass",
+      "framesReviewed": 8,
+      "durationsMs": [
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        140,
+        240
+      ],
+      "findings": "Hands gather, eyelids and head lower into disappointment, then posture and eyes recover to an open neutral endpoint. No facial identity change or permanent collapsed pose."
+    },
+    {
+      "state": "waiting",
+      "verdict": "pass",
+      "framesReviewed": 6,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        260
+      ],
+      "findings": "Open palms, expectant head tilt, offered hands and briefly clasped hands create a readable awaiting-response gesture, ending back at open palms. Cream/mint sleeves and hands remain intact on both backgrounds."
+    },
+    {
+      "state": "running",
+      "verdict": "pass",
+      "framesReviewed": 6,
+      "durationsMs": [
+        120,
+        120,
+        120,
+        120,
+        120,
+        220
+      ],
+      "findings": "Stationary activity/thinking action raises the anatomical-left hand to the left-ear headset, closes eyes in concentration, lowers the hand and returns. It is visually distinct from the directional gait actions."
+    },
+    {
+      "state": "review",
+      "verdict": "pass",
+      "framesReviewed": 6,
+      "durationsMs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        280
+      ],
+      "findings": "Hands held behind, mild left/right head/eye scan, slight lean and downward nod return to front. The motion remains restrained and uses the same face, bob and headset."
+    },
+    {
+      "state": "look-directions",
+      "verdict": "pass_with_warnings",
+      "framesReviewed": 16,
+      "durationsMs": [
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160,
+        160
+      ],
+      "findings": "All four cardinals and quadrant progression read correctly in clockwise order. Body/base and single-ear headset semantics are consistent. Weak157.5/337.5 horizontal cues and similar292.5/315 poses are documented in direction-semantics.json."
+    }
   ],
-  "repair_rows": []
+  "backgrounds": [
+    "light",
+    "dark"
+  ],
+  "warnings": [
+    "Intermediate horizontal direction is weak at157.5 and337.5 at192x208; both are near-center in isolation, while their vertical cues and ordered-loop placement are clear.",
+    "292.5 and315 are visually very similar;045 and067.5 also have limited separation. Angular spacing is uneven, without a wrong quadrant or reversal.",
+    "Continuity metric flags067.5->090:1469 changed pixels versus neighbor average856. Frame comparison shows a larger pitch-to-level step, not an identity, geometry or scale discontinuity.",
+    "Runtime Codex/browser playback could not be observed because of the helper sandbox fault. Timing was read from actual GIF files; no real-time UI playback claim is made."
+  ],
+  "hard_failures": [],
+  "runtimeDisplayVerified": false,
+  "method": "ordered actual GIF/atlas frames at192x208 plus timing; runtime playback not observed",
+  "characterConsistency": {
+    "verdict": "pass",
+    "findings": "Consistent soft matte3D finish, roughly three-head chibi proportions, silver-blue bob/ahoge, teal eyes, cream/mint dress and matching boots. No conspicuous face, hair, outfit, limb geometry or scale change was found at actual192x208 cell size.",
+    "headset": "One anatomical-left ear device: screen-right in frontal views, occluded/far-side when facing screen-right, near-side visible when facing screen-left. No duplicate or side swap observed."
+  },
+  "edgeAndAlpha": {
+    "verdict": "pass",
+    "findings": "Hair tips, ahoge, sleeves, fingers and boots are intact on light and dark backgrounds. No visible internal alpha holes, matte cutout rim or conspicuous green fringe. Every used final-atlas cell has nonzero-alpha bounds inset from all cell edges.",
+    "minimumAlphaInsetPixels": 5,
+    "atlasBoundsChecked": true
+  },
+  "validation": {
+    "source": "final/validation-extended.json",
+    "ok": true,
+    "format": "WEBP",
+    "mode": "RGBA",
+    "width": 1536,
+    "height": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208,
+    "spriteVersion": 2,
+    "errors": [],
+    "warnings": [],
+    "transparentRgbResiduePixels": 0
+  },
+  "directionSemantics": {
+    "ok": true,
+    "source": "qa/direction-semantics.json",
+    "continuity": "pass_with_warnings",
+    "blindReportReviewed": true
+  },
+  "timingReview": {
+    "source": "qa/final-review/*.gif",
+    "allGifSizes": [
+      192,
+      208
+    ],
+    "allLoopValues": 0,
+    "findings": "Decoded GIF frame counts and per-frame durations were read. Contact sheets show their order/durations; look loop is16 frames at160ms each. Several preview animations intentionally hold the last frame longer. Runtime frame scheduling was not witnessed."
+  },
+  "reviewedSources": [
+    "qa/final-review/idle-light-dark.jpg",
+    "qa/final-review/running-right-light-dark.jpg",
+    "qa/final-review/running-left-light-dark.jpg",
+    "qa/final-review/waving-light-dark.jpg",
+    "qa/final-review/jumping-light-dark.jpg",
+    "qa/final-review/failed-light-dark.jpg",
+    "qa/final-review/waiting-light-dark.jpg",
+    "qa/final-review/running-light-dark.jpg",
+    "qa/final-review/review-light-dark.jpg",
+    "qa/final-review/look-directions-light-dark.jpg",
+    "qa/final-review/*.gif",
+    "qa/look-directions.png",
+    "qa/look-continuity.json",
+    "qa/direction-blind-validation.json",
+    "final/validation-extended.json",
+    "final/spritesheet-extended.json",
+    "final/spritesheet-extended.webp"
+  ],
+  "scope": "Read-only independent visual assessment of final pixels and timing metadata. Only these two QA JSON reports were written; artwork was not modified.",
+  "spritesheetSha256": "BD2FDFD08223E2B3827648C7830801DDB497FB59F7B6D90B2382C9A400A37797",
+  "runtimeDisplayConfirmation": {
+    "status": "confirmed",
+    "source": "user",
+    "date": "2026-09-14",
+    "statement": "用户确认已成功切换到新版桌宠。"
+  },
+  "runtimeDisplayVerifiedMeaning": "Direct runtime observation by the agent; user confirmation is recorded separately."
 }

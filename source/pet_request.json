@@ -1,7 +1,7 @@
 {
   "pet_id": "xiaocheng",
   "display_name": "小澄·薄荷助手",
-  "description": "温柔安静的成年 Q 版二次元薄荷助手。",
+  "description": "温柔灵动的成年 Q 版薄荷助手，柔和 3D 手办质感。",
   "sprite_version_number": 2,
   "atlas": {
     "columns": 8,
@@ -12,32 +12,90 @@
     "height": 2288
   },
   "rows": [
-    { "state": "idle", "row": 0, "frames": 6 },
-    { "state": "running-right", "row": 1, "frames": 8 },
-    { "state": "running-left", "row": 2, "frames": 8 },
-    { "state": "waving", "row": 3, "frames": 4 },
-    { "state": "jumping", "row": 4, "frames": 5 },
-    { "state": "failed", "row": 5, "frames": 8 },
-    { "state": "waiting", "row": 6, "frames": 6 },
-    { "state": "running", "row": 7, "frames": 6 },
-    { "state": "review", "row": 8, "frames": 6 },
+    {
+      "state": "idle",
+      "row": 0,
+      "frames": 6
+    },
+    {
+      "state": "running-right",
+      "row": 1,
+      "frames": 8
+    },
+    {
+      "state": "running-left",
+      "row": 2,
+      "frames": 8
+    },
+    {
+      "state": "waving",
+      "row": 3,
+      "frames": 4
+    },
+    {
+      "state": "jumping",
+      "row": 4,
+      "frames": 5
+    },
+    {
+      "state": "failed",
+      "row": 5,
+      "frames": 8
+    },
+    {
+      "state": "waiting",
+      "row": 6,
+      "frames": 6
+    },
+    {
+      "state": "running",
+      "row": 7,
+      "frames": 6
+    },
+    {
+      "state": "review",
+      "row": 8,
+      "frames": 6
+    },
     {
       "state": "look-row-9",
       "row": 9,
       "frames": 8,
-      "directions": ["000", "022.5", "045", "067.5", "090", "112.5", "135", "157.5"]
+      "directions": [
+        "000",
+        "022.5",
+        "045",
+        "067.5",
+        "090",
+        "112.5",
+        "135",
+        "157.5"
+      ]
     },
     {
       "state": "look-row-10",
       "row": 10,
       "frames": 8,
-      "directions": ["180", "202.5", "225", "247.5", "270", "292.5", "315", "337.5"]
+      "directions": [
+        "180",
+        "202.5",
+        "225",
+        "247.5",
+        "270",
+        "292.5",
+        "315",
+        "337.5"
+      ]
     }
   ],
   "reference": "source/references/canonical-base.png",
   "chroma_key": "#FF00FF",
-  "style_preset": "sticker",
-  "identity": "成年 Q 版二次元少女；银蓝短发、青绿色眼睛、奶油白与薄荷青连帽裙；单侧耳麦固定在角色解剖学左耳；温柔安静的自然表情。",
-  "look_mechanics": "眼睛先移动，眼睑和眉毛配合，头颈随后轻微转向，上半身只做克制跟随；禁止旋转整个角色。",
-  "primary_generation_skill": "$imagegen"
+  "style_preset": "3d-toy",
+  "identity": "成年 Q 版助手，约三头身；柔和哑光 3D 手办材质；银蓝短发、青绿色眼睛、奶油白与薄荷连帽裙；解剖学左耳单侧耳麦；温柔灵动。",
+  "look_mechanics": "眼球在眼眶内整体转动，眼睑眉毛配合，头颈随后轻转，下身稳定；右转时左耳耳罩远侧遮挡，左转时近侧可见；禁止旋转整张角色。",
+  "primary_generation_skill": "$imagegen",
+  "neutral_look_frame": {
+    "row": 0,
+    "column": 6
+  }
 }
